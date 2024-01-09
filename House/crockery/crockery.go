@@ -2,57 +2,45 @@ package crockery
 
 // Посуда
 
-type Spoons struct { // Ложки
+type Crockery struct {
 	Number    int    // Количество
 	Material  string // Материал изготовления
 	Engraving bool   // Наличие гравировки
+}
+
+type Spoons struct { // Ложки
+	Crockery Crockery
 }
 
 type Forks struct { // Вилки
-	Number    int    // Количество
-	Material  string // Материал изготовления
-	Engraving bool   // Наличие гравировки
+	Crockery Crockery
 }
 
 type Knives struct { // Ножи
-	Number    int    // Количество
-	Material  string // Материал изготовления
-	Engraving bool   // Наличие гравировки
+	Crockery Crockery
 }
 
 type Plates struct { // Тарелки
-	Number    int    // Количество
-	Material  string // Материал изготовления
-	Engraving bool   // Наличие гравировки
+	Crockery Crockery
 }
 
 type Cups struct { // Чашки
-	Number    int    // Количество
-	Material  string // Материал изготовления
-	Engraving bool   // Наличие гравировки
+	Crockery Crockery
 }
 
 type Pots struct { // Кастрюли
-	Number    int    // Количество
-	Material  string // Материал изготовления
-	Engraving bool   // Наличие гравировки
+	Crockery Crockery
 }
 
 type Pans struct { // Сковородки
-	Number    int    // Количество
-	Material  string // Материал изготовления
-	Engraving bool   // Наличие гравировки
+	Crockery Crockery
 }
 
 type Lids struct { // Крышки
-	Number    int    // Количество
-	Material  string // Материал изготовления
-	Engraving bool   // Наличие гравировки
+	Crockery Crockery
 }
 type Containers struct { // Контейнеры
-	Number    int    // Количество
-	Material  string // Материал изготовления
-	Engraving bool   // Наличие гравировки
+	Crockery Crockery
 }
 
 type TableSetting struct { // Сервировка стола

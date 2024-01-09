@@ -2,47 +2,31 @@ package plumbing
 
 // сантехника
 
-type Bath struct {
+type Plumbung struct {
 	Length   int
 	Width    int
 	Height   int
 	Color    string
 	Material string
 	Features string
+}
+
+type Bath struct {
+	Bath Plumbung
 }
 
 type Sink struct { // раковина
-	Length   int
-	Width    int
-	Height   int
-	Color    string
-	Material string
-	Features string
+	Bath Plumbung
 }
 
 type Toilet struct {
-	Length   int
-	Width    int
-	Height   int
-	Color    string
-	Material string
-	Features string
+	Bath Plumbung
 }
 
 type Faucet struct { // смеситель
-	Length   int
-	Width    int
-	Height   int
-	Color    string
-	Material string
-	Features string
+	Bath Plumbung
 }
 
 type Shower struct {
-	Length   int
-	Width    int
-	Height   int
-	Color    string
-	Material string
-	Features string
+	Bath Plumbung
 }

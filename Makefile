@@ -2,5 +2,7 @@ test:
 	@echo 'Мы сделали Makefile'
 
 up:
-	#скачать git bash
-#makefile в main.go
+	sudo docker-compose up —build Home
+
+stop:
+	sudo docker-compose stop

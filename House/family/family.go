@@ -6,7 +6,7 @@ type Person struct {
 	Patronymic string // Отчество
 	Age        int    // Возраст
 	Birthday   string // Дата рождения
-	Gender     bool   // Пол
+	Gender     bool   // Пол, true - ж, false - м
 }
 
 type Mother struct { // Мама

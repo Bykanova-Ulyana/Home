@@ -1,10 +1,20 @@
 package furniture
 
+import (
+	"fmt"
+)
+
+type Furniture struct {
+	Type     string
+	Number   int
+	Height   int
+	Width    int
+	Color    string
+	Material string
+}
+
 type Table struct {
-	Height             int
-	Width              int
-	Color              string
-	Material           string
+	table              Furniture
 	Purpose            string
 	NumberShelves      int
 	NumberDrawers      int
@@ -12,73 +22,41 @@ type Table struct {
 }
 
 type Bed struct {
-	Number   int
-	Height   int
-	Width    int
-	Color    string
-	Material string
+	bed Furniture
 }
 
 type Chair struct {
-	Number   int
-	Height   int
-	Width    int
-	Color    string
-	Material string
+	chair Furniture
 }
 
 type Armchair struct {
-	Number   int
-	Height   int
-	Width    int
-	Color    string
-	Material string
+	armchair Furniture
 }
 
 type Cot struct { // Детская кроватка
-	Number   int
-	Height   int
-	Width    int
-	Color    string
-	Material string
+	cot Furniture
 }
 
 type CoffeeTable struct {
-	Number   int
-	Height   int
-	Width    int
-	Color    string
-	Material string
+	coffeeTable Furniture
 }
 
 type Sideboard struct { // сервант
-	Height   int
-	Width    int
-	Color    string
-	Material string
-	Number   int
+	sideboard Furniture
 }
 
 type Sofa struct { // диван
-	Height   int
-	Width    int
-	Color    string
-	Material string
-	Number   int
+	sofa Furniture
 }
 
 type Wardrobe struct { // Шкаф для одежды
-	Height   int
-	Width    int
-	Color    string
-	Material string
-	Number   int
+	wardrobe Furniture
 }
 
 type BedsideTable struct { // Прикроватная тумбочка
-	Height   int
-	Width    int
-	Color    string
-	Material string
-	Number   int
+	bedsideTable Furniture
+}
+
+func (f Furniture) FurniturePrint() {
+	fmt.Println("\n\tтип мебели: ", f.Type, "\n\tцвет: ", f.Color, "\n\tматериал: ", f.Material, "\n\tколичество: ", f.Number, "\n\tширина: ", f.Width, "\n\tвысота: ", f.Height, "\n")
 }

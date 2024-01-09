@@ -1,7 +1,4 @@
-FROM ubuntu:latest
-LABEL authors="Анна"
-
-ENTRYPOINT ["top", "-b"]
+FROM golang:1.21-alpine
 
 RUN go version
 ENV GOPATH=/
@@ -9,6 +6,6 @@ ENV GOPATH=/
 COPY ./ ./
 
 RUN go mod download
-RUN go build -0 Structs ./config/main.go
+RUN go build -o Home ./main.go
 
-CMD ["./Structs"]
+CMD ["./Home"]

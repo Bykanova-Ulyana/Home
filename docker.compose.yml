@@ -1,9 +1,9 @@
 version: '3.3'
 
 services:
-  Structs:
+  Home:
     build: ./
-    command: ./Structs
+    command: ./awesome_project
     ports:
       - 8000:8000
     depends_on:
@@ -22,14 +22,9 @@ services:
       - POSTGRES_PASSWORD=123
     ports:
       - 5436:5432
-    depends_on:
-      - adminer
-    adminer:
-      image: adminer
-      restart:always
-      ports:
-        - 8080:8080
-          
-          
-          
-          // создать make file
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
