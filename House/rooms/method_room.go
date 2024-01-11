@@ -1,17 +1,28 @@
 package rooms
 
-import "golang/Home/House/furniture"
+import (
+	"golang/Home/House/furniture"
+)
 
-// функция проверяет, можно ли установить мебель в комнате
+// Функция, которая проверяет, можно ли установить предмет на полу и влезет ли он по высоте
 
-func canFitAllFurniture(furniture []furniture.Furniture, room Room, newFurniture furniture.Furniture) bool {
-	totalVolume := 0
-	for _, f := range furniture {
-		totalVolume += f.Length * f.Width * f.Height
+func CanFitOnFloor(furniture []furniture.Furniture, room Room, newFurniture furniture.Furniture) bool {
+	// Проверяем, достаточно ли места на полу для новой мебели
+	if newFurniture.Length <= room.Length && newFurniture.Width <= room.Width {
+		// Проверяем, влезет ли новая мебель по высоте
+		heightLimit := room.Height - newFurniture.Height
+		for _, item := range furniture {
+			if item.Height > heightLimit {
+				return false
+			}
+		}
+		return true
 	}
-	totalVolume += newFurniture.Length * newFurniture.Width * newFurniture.Height
+	return false
+}
 
-	roomVolume := room.Length * room.Width * room.Height
+// считаем площадь комнаты
 
-	return totalVolume <= roomVolume
+func (r Room) AreaCalculate() float32 {
+	return r.Width * r.Length
 }
