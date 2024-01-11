@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func getInputForAppliance() (Appliance, error) {
+func GetInputForAppliance() (Appliance, error) {
 	var appliance Appliance
 	var err [7]error
 	fmt.Println("Введите название бытового прибора:")
@@ -37,7 +37,8 @@ func getInputForAppliance() (Appliance, error) {
 }
 
 // Функция для вывода информации о бытовых приборах
-func printAppliance(appliance Appliance) {
+
+func PrintAppliance(appliance Appliance) {
 	fmt.Printf("%s\n Бренд: %s\n Размер: %f x %f x %f\n см Мощность: %i\n Прибор включён? %b", appliance.Name,
 		appliance.Brand, appliance.Width, appliance.Length,
 		appliance.Width, appliance.Power, appliance.IsOn)

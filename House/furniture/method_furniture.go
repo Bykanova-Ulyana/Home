@@ -6,7 +6,7 @@ func (f Furniture) FurniturePrint() {
 	fmt.Println("\n\tтип мебели: ", f.Type, "\n\tцвет: ", f.Color, "\n\tматериал: ", f.Material, "\n\tколичество: ", f.Number, "\n\tширина: ", f.Width, "\n\tвысота: ", f.Height, "\n")
 }
 
-func getInputForFurniture() (Furniture, error) {
+func GetInputForFurniture() (Furniture, error) {
 	var furniture Furniture
 	var err [7]error
 	fmt.Println("Тип мебели:")

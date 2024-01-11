@@ -44,7 +44,8 @@ func purposeTranscript(pr int) string {
 }
 
 // Функция для вывода информации о посуде
-func printCrockery(crockery Crockery) {
+
+func PrintCrockery(crockery Crockery) {
 	engraving := "без гравировки"
 	if crockery.Engraving {
 		engraving = "есть гранировка"

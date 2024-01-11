@@ -6,7 +6,8 @@ import (
 )
 
 // Функция для ввода данных о питомце
-func getInputForPets() Pets {
+
+func GetInputForPets() Pets {
 	var pet Pets
 	all := "кошка собака кролик хомяк попугай лошадь овца"
 

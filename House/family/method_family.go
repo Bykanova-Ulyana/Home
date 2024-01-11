@@ -7,7 +7,7 @@ import (
 )
 
 // Функция для ввода данных о членах семьи
-func getInputForFamilyMember() FamilyMember {
+func GetInputForFamilyMember() FamilyMember {
 	var familyMember FamilyMember
 	fmt.Println("Введите ФИО члена семьи: ")
 	fmt.Scanln(&familyMember.Surname, &familyMember.Name, &familyMember.Patronymic)
@@ -24,7 +24,7 @@ func getInputForFamilyMember() FamilyMember {
 }
 
 // Функция для вывода информации о семье
-func printFamilyMember(fm FamilyMember) {
+func PrintFamilyMember(fm FamilyMember) {
 	fmt.Printf(" %s\nФИО: %s %s %s\n Дата рождения: %s\nВозраст: %d\nПол: %s\n", fm.Relation,
 		fm.Surname, fm.Name, fm.Patronymic, fm.Birthday, fm.Age, fm.Gender)
 }
