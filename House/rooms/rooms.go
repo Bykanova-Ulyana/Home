@@ -13,10 +13,15 @@ type Room struct {
 	Width      float32 // Ширина
 	Length     float32 // Длина
 	Height     float32 // Высота
+	Area       float32 // Площадь
 	Appliances []appliances.Appliance
 	Family     []family.FamilyMember
 	Crockery   []crockery.Crockery
 	Plumbings  []plumbing.Plumbing
 	Furniture  []furniture.Furniture
 	Pets       []family.Pets
+}
+
+type Home struct {
+	Rooms []Room
 }
