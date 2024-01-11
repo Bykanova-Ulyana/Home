@@ -3,11 +3,15 @@ package crockery
 // Посуда
 
 type Crockery struct {
+	Type      string // Вид прибора
+	Purpose   string // Назначение
 	Number    int    // Количество
 	Material  string // Материал изготовления
 	Engraving bool   // Наличие гравировки
+	Capacity  int    // Вместимость
 }
 
+/*
 type Spoons struct { // Ложки
 	Crockery Crockery
 }
@@ -43,24 +47,34 @@ type Containers struct { // Контейнеры
 	Crockery Crockery
 }
 
-type TableSetting struct { // Сервировка стола
-	Number int
-	Cup    Cups
-	Plate  Plates
-	Spoon  Spoons
-	Fork   Forks
+type tableSetting struct { // Сервировка стола
+	Cup   Cups
+	Plate Plates
+	Spoon Spoons
+	Fork  Forks
 }
 
-type Cookware struct { // Кухонная утварь
-	Number int
-	Pot    Pots
-	Knife  Knives
-	Lid    Lids
-	Pan    Pans
+type cookware struct { // Кухонная утварь
+	Pot   Pots
+	Knife Knives
+	Lid   Lids
+	Pan   Pans
 }
 
-type StorageUtensils struct { // Посуда для хранения
-	Number    int
-	lid       Lids
+type storageUtensils struct { // Посуда для хранения
+	Lid       Lids
 	Container Containers
 }
+
+type TableSetting struct {
+	TableSetting []tableSetting
+}
+
+type Cookware struct {
+	Cookware []cookware
+}
+
+type StorageUtensils struct {
+	StorageUtensils []storageUtensils
+}
+*/

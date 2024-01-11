@@ -1,9 +1,8 @@
 package windows
 
 type Window struct {
-	Number   int
-	Length   int
-	Width    int
-	Height   int
-	Material string
+	Number     int
+	Length     float32
+	Width      float32
+	OpenWindow bool
 }

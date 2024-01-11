@@ -2,31 +2,10 @@ package plumbing
 
 // сантехника
 
-type Plumbung struct {
-	Length   int
-	Width    int
-	Height   int
-	Color    string
-	Material string
-	Features string
-}
-
-type Bath struct {
-	Bath Plumbung
-}
-
-type Sink struct { // раковина
-	Bath Plumbung
-}
-
-type Toilet struct {
-	Bath Plumbung
-}
-
-type Faucet struct { // смеситель
-	Bath Plumbung
-}
-
-type Shower struct {
-	Bath Plumbung
+type Plumbing struct {
+	Type      string // Тип устройства (например, раковина, унитаз, душ и т.д.)
+	Brand     string // Бренд устройства
+	Model     string // Модель устройства
+	Material  string // Материал, из которого сделано устройство
+	Installed bool   // Флаг, указывающий, установлено ли устройство
 }
