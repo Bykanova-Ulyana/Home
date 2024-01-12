@@ -6,6 +6,7 @@ import (
 	"golang/Home/House/family"
 	"golang/Home/House/furniture"
 	"golang/Home/House/plumbing"
+	"golang/Home/House/windows"
 )
 
 type Room struct {
@@ -20,6 +21,7 @@ type Room struct {
 	Plumbings  []plumbing.Plumbing
 	Furniture  []furniture.Furniture
 	Pets       []family.Pets
+	Window     windows.Window
 }
 
 type Home struct {
