@@ -1,7 +1,13 @@
 package rooms
 
 import (
+	"fmt"
+	"golang/Home/House/appliances"
+	"golang/Home/House/crockery"
+	"golang/Home/House/family"
 	"golang/Home/House/furniture"
+	"golang/Home/House/plumbing"
+	"golang/Home/House/windows"
 )
 
 // Функция, которая проверяет, можно ли установить предмет на полу и влезет ли он по высоте
@@ -25,4 +31,18 @@ func CanFitOnFloor(furniture []furniture.Furniture, room Room, newFurniture furn
 
 func (r Room) AreaCalculate() float32 {
 	return r.Width * r.Length
+}
+
+func PrintHome(h Home) {
+	for _, room := range h.Rooms {
+		fmt.Printf("%s\n размеры (м):%f x %f x %f, площадь комнаты: %f \nВ комнате есть: \n\n",
+			room.Type, room.Length, room.Width, room.Height, room.AreaCalculate())
+		appliances.PrintAppliance(room.Appliances)
+		furniture.PrintFurniture(room.Furniture)
+		crockery.PrintCrockery(room.Crockery)
+		family.PrintPet(room.Pets)
+		plumbing.PrintCrockery(room.Plumbings)
+		family.PrintFamilyMember(room.Family)
+		windows.PrintWindow(room.Window)
+	}
 }
