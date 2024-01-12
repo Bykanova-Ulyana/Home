@@ -6,6 +6,7 @@ import (
 
 func main() {
 	var home rooms.Home
-	home.CreatHome()
+	home = home.CreatHome()
 	rooms.PrintHome(home)
+	println("Готово!")
 }
