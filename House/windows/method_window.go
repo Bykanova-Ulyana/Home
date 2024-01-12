@@ -7,7 +7,7 @@ func createWindow() Window {
 	return window
 }
 
-func StatusOpenCloseWindow(w Window, command bool) {
+func StatusOpenCloseWindow(w *Window, command bool) {
 	switch command {
 	case command == true || w.OpenWindow == true:
 		println("Окно открыто")
@@ -18,6 +18,10 @@ func StatusOpenCloseWindow(w Window, command bool) {
 	}
 }
 
-func printWindow(w Window) {
-	fmt.Printf("Длина окна %f, ширина окна %f\n", w.Length, w.Width)
+func PrintWindow(w Window) {
+	openClose := "открыто"
+	if w.OpenWindow {
+		openClose = "закрыто"
+	}
+	fmt.Printf("Длина окна %f, ширина окна %f, окно открыто %s \n", w.Length, w.Width, openClose)
 }
