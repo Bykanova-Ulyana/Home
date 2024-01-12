@@ -38,8 +38,11 @@ func GetInputForAppliance() (Appliance, error) {
 
 // Функция для вывода информации о бытовых приборах
 
-func PrintAppliance(appliance Appliance) {
-	fmt.Printf("%s\n Бренд: %s\n Размер: %f x %f x %f\n см Мощность: %i\n Прибор включён? %b", appliance.Name,
-		appliance.Brand, appliance.Width, appliance.Length,
-		appliance.Width, appliance.Power, appliance.IsOn)
+func PrintAppliance(a []Appliance) {
+	for _, appliance := range a {
+		fmt.Printf("%s\n Бренд: %s\n Размер: %f x %f x %f\n см Мощность: %i\n Прибор включён? %b", appliance.Name,
+			appliance.Brand, appliance.Width, appliance.Length,
+			appliance.Width, appliance.Power, appliance.IsOn)
+	}
+
 }

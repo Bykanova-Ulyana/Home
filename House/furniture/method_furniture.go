@@ -2,8 +2,11 @@ package furniture
 
 import "fmt"
 
-func (f Furniture) FurniturePrint() {
-	fmt.Println("\n\tтип мебели: ", f.Type, "\n\tцвет: ", f.Color, "\n\tматериал: ", f.Material, "\n\tколичество: ", f.Number, "\n\tширина: ", f.Width, "\n\tвысота: ", f.Height, "\n")
+func PrintFurniture(furniture []Furniture) {
+	for _, f := range furniture {
+		fmt.Println("\n\tТип мебели: ", f.Type, "\n\tцвет: ", f.Color, "\n\tматериал: ",
+			f.Material, "\n\tколичество: ", f.Number, "\n\tширина: ", f.Width, "\n\tвысота: ", f.Height)
+	}
 }
 
 func GetInputForFurniture() (Furniture, error) {

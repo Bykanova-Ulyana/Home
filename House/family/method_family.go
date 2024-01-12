@@ -24,9 +24,13 @@ func GetInputForFamilyMember() FamilyMember {
 }
 
 // Функция для вывода информации о семье
-func PrintFamilyMember(fm FamilyMember) {
-	fmt.Printf(" %s\nФИО: %s %s %s\n Дата рождения: %s\nВозраст: %d\nПол: %s\n", fm.Relation,
-		fm.Surname, fm.Name, fm.Patronymic, fm.Birthday, fm.Age, fm.Gender)
+
+func PrintFamilyMember(family []FamilyMember) {
+	for _, fm := range family {
+		fmt.Printf(" %s\nФИО: %s %s %s\n Дата рождения: %s\nВозраст: %d\nПол: %s\n", fm.Relation,
+			fm.Surname, fm.Name, fm.Patronymic, fm.Birthday, fm.Age, fm.Gender)
+	}
+
 }
 
 func ageCalculation(birthday string) int {

@@ -21,12 +21,14 @@ func GetInputForPlumbing() Plumbing {
 
 // Функция для вывода информации о посуде
 
-func PrintCrockery(pl Plumbing) {
-	install := "установлено"
-	if pl.Installed {
-		install = "не установлено"
+func PrintCrockery(plumbing []Plumbing) {
+	for _, pl := range plumbing {
+		install := "установлено"
+		if pl.Installed {
+			install = "не установлено"
+		}
+		fmt.Printf("%s бренда %s имеет %s цвет, материал: %s, установлено: %s", pl.Type, pl.Brand, pl.Color, pl.Material, install)
 	}
-	fmt.Printf("%s бренда %s имеет %s цвет, материал: %s, установлено: %s", pl.Type, pl.Brand, pl.Color, pl.Material, install)
 }
 
 // Метод для установки устройства

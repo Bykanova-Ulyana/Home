@@ -2,16 +2,6 @@ package crockery
 
 import "fmt"
 
-/*func CreateCrockery() TableSetting {
-
-	tableSet := []tableSetting{{Cup: Cups{Crockery: Crockery{Number: 6, Material: "Серебро", Engraving: true}}},
-		{Plate: Plates{Crockery: Crockery{Number: 6, Material: "Фарфор", Engraving: true}}},
-		{Spoon: Spoons{Crockery: Crockery{Number: 6, Material: "Серебро", Engraving: false}}},
-		{Fork: Forks{Crockery: Crockery{Number: 6, Material: "Серебро", Engraving: false}}}}
-
-	return TableSetting{tableSet}
-}*/
-
 // Функция для ввода данных о посуде
 
 func GetInputForCrockery() Crockery {
@@ -45,11 +35,14 @@ func purposeTranscript(pr int) string {
 
 // Функция для вывода информации о посуде
 
-func PrintCrockery(crockery Crockery) {
-	engraving := "без гравировки"
-	if crockery.Engraving {
-		engraving = "есть гранировка"
+func PrintCrockery(cr []Crockery) {
+	for _, crockery := range cr {
+		engraving := "без гравировки"
+		if crockery.Engraving {
+			engraving = "есть гравировка"
+		}
+		fmt.Printf("%s\nПредназначение: %s\n Материал: %s\nКоличество: %d\nНаличие гравировки: %d\nОбъём: %d", crockery.Type,
+			crockery.Purpose, crockery.Material, crockery.Number, engraving, crockery.Capacity)
 	}
-	fmt.Printf("%s\nПредназначение: %s\n Материал: %s\nКоличество: %d\nНаличие гравировки: %d\nОбъём: %d", crockery.Type,
-		crockery.Purpose, crockery.Material, crockery.Number, engraving, crockery.Capacity)
+
 }
