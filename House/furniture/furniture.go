@@ -1,11 +1,11 @@
 package furniture
 
 type Furniture struct { // мебель
-	Type     string
-	Number   int
-	Height   float32
-	Width    float32
-	Length   float32
-	Color    string
-	Material string
+	Type     string  // наименование
+	Number   int     // количество
+	Height   float32 // высота
+	Width    float32 // ширина
+	Length   float32 // длина
+	Color    string  // цвет
+	Material string  // материал
 }
