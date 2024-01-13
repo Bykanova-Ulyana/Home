@@ -35,7 +35,7 @@ func (r Room) AreaCalculate() float32 {
 
 func PrintHome(h Home) {
 	for _, room := range h.Rooms {
-		fmt.Printf("%s\n размеры (м):%f x %f x %f, площадь комнаты: %f \nВ комнате есть: \n\n",
+		fmt.Printf("%s\n\tразмеры (м):%.2f x %.2f x %.2f м\n\tПлощадь комнаты: %.2f м^2\nВ комнате есть: \n",
 			room.Type, room.Length, room.Width, room.Height, room.AreaCalculate())
 		appliances.PrintAppliance(room.Appliances)
 		furniture.PrintFurniture(room.Furniture)

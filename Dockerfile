@@ -6,6 +6,6 @@ ENV GOPATH=/
 COPY ./ ./
 
 RUN go mod download
-RUN go build -o Home ./main.go
+RUN go build Home ./main.go
 
-CMD ["./Home"]
+CMD ["./home"]
